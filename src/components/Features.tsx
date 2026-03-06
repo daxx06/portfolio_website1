@@ -45,9 +45,9 @@ export default function Features() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1, type: "spring", stiffness: 100 }}
                             viewport={{ once: true }}
-                            className="flex flex-col gap-4 bg-surface-dark/10 p-8 rounded-[2rem] border-4 border-transparent hover:border-warning hover:bg-surface-dark/20 transition-all duration-300"
+                            className="group flex flex-col items-start gap-4 bg-surface-dark/10 p-8 rounded-[2rem] border-4 border-transparent hover:border-warning hover:bg-surface-dark/20 transition-all duration-300"
                         >
-                            <div className="w-16 h-16 rounded-[1.5rem] bg-warning text-foreground flex items-center justify-center border-4 border-foreground shadow-[4px_4px_0px_0px_rgba(45,27,51,1)] -rotate-3 hover:rotate-3 transition-transform">
+                            <div className="w-16 h-16 shrink-0 rounded-[1.5rem] bg-warning text-foreground flex items-center justify-center border-4 border-foreground shadow-[4px_4px_0px_0px_rgba(45,27,51,1)] -rotate-3 group-hover:rotate-0 transition-transform">
                                 {feature.icon}
                             </div>
                             <div>

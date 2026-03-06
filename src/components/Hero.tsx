@@ -4,6 +4,7 @@ import { motion, Variants } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import { Float, MeshWobbleMaterial, Cone, Torus, Sphere, Octahedron } from "@react-three/drei";
 import { ArrowRight, Sparkles } from "lucide-react";
+import CircularBadge from "./CircularBadge";
 
 const PlayfulBackground = () => {
     return (
@@ -76,7 +77,12 @@ export default function Hero() {
                     animate="show"
                     className="max-w-6xl relative"
                 >
-                    <motion.div variants={itemVariants} className="mb-6 flex justify-center">
+                    <motion.div variants={itemVariants} className="mb-6 flex justify-center relative">
+                        {/* The new circular rotating badge floating over the hero text */}
+                        <div className="absolute -top-32 -right-10 md:-right-32 lg:-right-48 z-20 text-danger opacity-90 hidden sm:block">
+                            <CircularBadge text="FASTEST SITES • CRAFTED WITH LOVE • " size={200} />
+                        </div>
+
                         <span className="sticker-badge px-6 py-2 text-sm tracking-widest gap-2 rotate-[-2deg]">
                             <Sparkles className="w-4 h-4" />
                             Freshest Code in Town

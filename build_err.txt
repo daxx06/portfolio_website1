@@ -1,0 +1,146 @@
+??? Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+node.exe : 
+At line:1 char:1
++ & "C:\Program File
+s\nodejs/node.exe" 
+"C:\Program Files\no
+dejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo  
+            : NotS  
+  pecified: (:Str   
+ ing) [], Remote    
+Exception
+    + FullyQualifie 
+   dErrorId : Nati  
+  veCommandError
+ 
+> Build error 
+occurred
+Error: Turbopack 
+build failed with 1 
+errors:
+./src/app/api/leads/
+[id]/route.ts:5:1
+Module not found: 
+Can't resolve '../au
+th/[...nextauth]/rou
+te'
+[0m [90m 3 |[39m 
+[36mimport[39m 
+[33mLead[39m 
+[36mfrom[39m [32m
+'@/models/Lead'[39m
+[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { 
+getServerSession } 
+[36mfrom[39m [32m
+"next-auth/next"[39
+m[33m;[39m
+[31m[1m>[22m[39m
+[90m 5 |[39m 
+[36mimport[39m { 
+authOptions } 
+[36mfrom[39m [32m
+"../auth/[...nextaut
+h]/route"[39m[33m;
+[39m
+ [90m   |[39m [31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m[31
+m[1m^[22m[39m
+ [90m 6 |[39m
+ [90m 7 |[39m 
+[36mexport[39m 
+[36masync[39m 
+[36mfunction[39m 
+[33mDELETE[39m(req
+[33m:[39m [33mRequ
+est[39m[33m,[39m 
+{ params 
+}[33m:[39m { 
+params[33m:[39m { 
+id[33m:[39m 
+string } }) {
+ [90m 8 |[39m     
+[36mconst[39m 
+session [33m=[39m 
+[36mawait[39m getS
+erverSession(authOpt
+ions)[33m;[39m[0m
+
+
+
+https://nextjs.org/d
+ocs/messages/module-
+not-found
+
+
+    at <unknown> (./
+src/app/api/leads/[i
+d]/route.ts:5:1)
+    at <unknown> (ht
+tps://nextjs.org/doc
+s/messages/module-no
+t-found)

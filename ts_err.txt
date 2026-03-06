@@ -1,0 +1,2 @@
+src/app/admin/page.tsx(17,9): error TS7034: Variable 'leads' implicitly has type 'any[]' in some locations where its type cannot be determined.
+src/app/admin/page.tsx(38,49): error TS7005: Variable 'leads' implicitly has an 'any[]' type.

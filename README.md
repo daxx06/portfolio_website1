@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WebX Digital Agency
 
-## Getting Started
+A premium, high-converting digital agency portfolio website built for modern businesses. Inspired by top-tier SaaS design, this website features a dark cyber-aesthetic, fluid 3D React Three Fiber backgrounds, Framer Motion scroll reveals, and a complete backend for lead generation and administration.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS (Custom Dark Theme & Glassmorphism)
+- **Animations:** Framer Motion
+- **3D Visuals:** React Three Fiber (`@react-three/fiber`, `@react-three/drei`)
+- **Database:** MongoDB (via Mongoose)
+- **Authentication:** NextAuth.js
+- **Icons:** Lucide React
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/app/page.tsx`: Main landing page combining all sections.
+- `src/components/*`: All modular architectural UI components (Hero, Services, Pricing, Contact, etc.)
+- `src/app/admin/page.tsx`: Secured NextAuth dashboard to manage collected leads.
+- `src/app/api/*`: Next.js Route handlers for authentication and MongoDB CRUD operations.
+- `src/models/Lead.ts`: Mongoose schema for the contact form leads.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💻 Getting Started Locally
 
-## Learn More
+1. **Clone the repository** (or download the files).
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Configure Environment Variables:**
+   Create a `.env.local` file in the root directory with the following variables:
+   ```env
+   # MongoDB Connection String (e.g. from MongoDB Atlas)
+   MONGODB_URI="mongodb+srv://<username>:<password>@cluster.mongodb.net/webx"
 
-To learn more about Next.js, take a look at the following resources:
+   # Secure secret for NextAuth sessions (generate with `openssl rand -base64 32`)
+   NEXTAUTH_SECRET="your_secure_random_string_here"
+   NEXTAUTH_URL="http://localhost:3000"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   # Admin Dashboard Credentials
+   ADMIN_EMAIL="admin@webx.com"
+   ADMIN_PASSWORD="admin123"
+   ```
+4. **Run the Development Server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view the website. Navigate to `/admin` to test the admin dashboard.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ☁️ Deployment (Vercel)
 
-## Deploy on Vercel
+This project is highly optimized for deployment on Vercel.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push your code to a GitHub repository.
+2. Go to your [Vercel Dashboard](https://vercel.com/dashboard) and create a New Project.
+3. Import the GitHub repository.
+4. **Crucial Step:** In the Vercel project settings, explicitly define the following Environment Variables before deploying:
+   - `MONGODB_URI`
+   - `NEXTAUTH_SECRET`
+   - `NEXTAUTH_URL` (set this to your production URL, e.g. `https://your-domain.com`)
+   - `ADMIN_EMAIL`
+   - `ADMIN_PASSWORD`
+5. Click **Deploy**. Vercel will automatically build the Next.js App Router project and allocate serverless functions for the API routes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Customization
+- **Theme Variables:** Colors, fonts, and spacing are defined in `tailwind.config.ts` and `src/app/globals.css`.
+- **3D Models:** The 3D shapes can be configured by modifying the `Sphere` and `MeshDistortMaterial` parameters in `src/components/Hero.tsx`.

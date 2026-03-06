@@ -79,7 +79,7 @@ export default function Portfolio() {
                             className={`group relative rounded-t-[10rem] rounded-b-[3rem] border-4 border-foreground shadow-[8px_8px_0px_0px_rgba(45,27,51,1)] ${project.rotation} hover:-rotate-1 transition-all duration-300 ${project.color} ${project.textColor} px-6 pb-12 pt-0 text-center flex flex-col items-center mt-20`}
                         >
                             {/* Circular Masked Top-Down Image */}
-                            <div className="w-56 h-56 rounded-full border-4 border-foreground shadow-[4px_4px_0px_0px_rgba(45,27,51,1)] overflow-hidden bg-background -mt-28 mb-8 group-hover:scale-110 transition-transform duration-500 z-10 relative">
+                            <div className="w-56 h-56 shrink-0 aspect-square rounded-full border-4 border-foreground shadow-[4px_4px_0px_0px_rgba(45,27,51,1)] overflow-hidden bg-background -mt-28 mb-8 group-hover:scale-110 transition-transform duration-500 z-10 relative">
                                 <img
                                     src={project.image}
                                     alt={project.title}

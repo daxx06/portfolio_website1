@@ -103,7 +103,7 @@ export default function Contact() {
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="bg-white p-10 md:p-14 rounded-[3rem] border-4 border-foreground shadow-[16px_16px_0px_0px_rgba(45,27,51,1)] relative z-10 -rotate-1"
+                        className="bg-white p-6 sm:p-10 md:p-14 rounded-3xl sm:rounded-[3rem] border-4 border-foreground shadow-[8px_8px_0px_0px_rgba(45,27,51,1)] md:shadow-[16px_16px_0px_0px_rgba(45,27,51,1)] relative z-10 -rotate-1 max-w-[100vw] overflow-hidden sm:overflow-visible box-border"
                     >
                         {status === "success" ? (
                             <div className="text-center py-16">
@@ -120,38 +120,38 @@ export default function Contact() {
                                 </button>
                             </div>
                         ) : (
-                            <form onSubmit={handleSubmit} className="space-y-8">
-                                <div className="space-y-2">
-                                    <label className="text-sm font-sans font-bold uppercase tracking-widest text-surface-dark/60 ml-2 sm:ml-4">What's your name?</label>
+                            <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8 w-full">
+                                <div className="space-y-2 w-full">
+                                    <label className="block text-sm font-sans font-bold uppercase tracking-widest text-surface-dark/60 ml-2 sm:ml-4">What's your name?</label>
                                     <input
                                         required
                                         type="text"
                                         value={formData.name}
                                         onChange={e => setFormData({ ...formData, name: e.target.value })}
-                                        className="w-full bg-background border-4 border-foreground rounded-full px-5 py-4 sm:px-8 sm:py-5 outline-none focus:border-accent font-sans font-bold text-base sm:text-lg focus:shadow-[6px_6px_0px_0px_rgba(0,107,107,1)] transition-all"
+                                        className="w-full bg-background border-4 border-foreground rounded-full px-4 py-3 sm:px-8 sm:py-5 outline-none focus:border-accent font-sans font-bold text-base sm:text-lg focus:shadow-[4px_4px_0px_0px_rgba(0,107,107,1)] sm:focus:shadow-[6px_6px_0px_0px_rgba(0,107,107,1)] transition-all"
                                         placeholder="Jane Doe"
                                     />
                                 </div>
 
-                                <div className="space-y-2">
-                                    <label className="text-sm font-sans font-bold uppercase tracking-widest text-surface-dark/60 ml-2 sm:ml-4">How can we reach you?</label>
+                                <div className="space-y-2 w-full">
+                                    <label className="block text-sm font-sans font-bold uppercase tracking-widest text-surface-dark/60 ml-2 sm:ml-4">How can we reach you?</label>
                                     <input
                                         required
                                         type="email"
                                         value={formData.email}
                                         onChange={e => setFormData({ ...formData, email: e.target.value })}
-                                        className="w-full bg-background border-4 border-foreground rounded-full px-5 py-4 sm:px-8 sm:py-5 outline-none focus:border-danger font-sans font-bold text-base sm:text-lg focus:shadow-[6px_6px_0px_0px_rgba(230,57,70,1)] transition-all"
+                                        className="w-full bg-background border-4 border-foreground rounded-full px-4 py-3 sm:px-8 sm:py-5 outline-none focus:border-danger font-sans font-bold text-base sm:text-lg focus:shadow-[4px_4px_0px_0px_rgba(230,57,70,1)] sm:focus:shadow-[6px_6px_0px_0px_rgba(230,57,70,1)] transition-all"
                                         placeholder="jane@company.com"
                                     />
                                 </div>
 
-                                <div className="space-y-2">
-                                    <label className="text-sm font-sans font-bold uppercase tracking-widest text-surface-dark/60 ml-2 sm:ml-4">Your Industry</label>
+                                <div className="space-y-2 w-full">
+                                    <label className="block text-sm font-sans font-bold uppercase tracking-widest text-surface-dark/60 ml-2 sm:ml-4">Your Industry</label>
                                     <select
                                         required
                                         value={formData.businessType}
                                         onChange={e => setFormData({ ...formData, businessType: e.target.value })}
-                                        className="w-full bg-background border-4 border-foreground rounded-full px-5 py-4 sm:px-8 sm:py-5 outline-none focus:border-accent font-sans font-bold text-base sm:text-lg focus:shadow-[6px_6px_0px_0px_rgba(0,107,107,1)] transition-all appearance-none cursor-pointer"
+                                        className="w-full bg-background border-4 border-foreground rounded-full px-4 py-3 sm:px-8 sm:py-5 outline-none focus:border-accent font-sans font-bold text-base sm:text-lg focus:shadow-[4px_4px_0px_0px_rgba(0,107,107,1)] sm:focus:shadow-[6px_6px_0px_0px_rgba(0,107,107,1)] transition-all appearance-none cursor-pointer"
                                     >
                                         <option value="" disabled>Select your vibe</option>
                                         <option value="Restaurant">Restaurant / Cafe</option>
@@ -162,14 +162,14 @@ export default function Contact() {
                                     </select>
                                 </div>
 
-                                <div className="space-y-2">
-                                    <label className="text-sm font-sans font-bold uppercase tracking-widest text-surface-dark/60 ml-2 sm:ml-4">Tell us the dream</label>
+                                <div className="space-y-2 w-full">
+                                    <label className="block text-sm font-sans font-bold uppercase tracking-widest text-surface-dark/60 ml-2 sm:ml-4">Tell us the dream</label>
                                     <textarea
                                         required
                                         rows={4}
                                         value={formData.message}
                                         onChange={e => setFormData({ ...formData, message: e.target.value })}
-                                        className="w-full bg-background border-4 border-foreground rounded-[2rem] px-5 py-4 sm:px-8 sm:py-5 outline-none focus:border-accent font-sans font-bold text-base sm:text-lg focus:shadow-[6px_6px_0px_0px_rgba(0,107,107,1)] transition-all resize-none"
+                                        className="w-full bg-background border-4 border-foreground rounded-[2rem] px-4 py-3 sm:px-8 sm:py-5 outline-none focus:border-accent font-sans font-bold text-base sm:text-lg focus:shadow-[4px_4px_0px_0px_rgba(0,107,107,1)] sm:focus:shadow-[6px_6px_0px_0px_rgba(0,107,107,1)] transition-all resize-none"
                                         placeholder="Tell us what you're trying to build..."
                                     />
                                 </div>
